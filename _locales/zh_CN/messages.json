@@ -1,0 +1,145 @@
+{
+    "extName": {
+        "message": "AI小窗",
+        "description": "扩展名字"
+    },
+    "extDescription": {
+        "message": "AI 小窗 | AI翻译 | 内容总结 | 快捷访问 | 无中转服务 | 支持通义千问、文心一言和ChatGPT",
+        "description": "插件注释"
+    },
+    "extDefaultTitle": {
+        "message": "打开AI小窗",
+        "description": "小图标上显示的默认标题"
+    },
+    "menuTransferTitle": {
+        "message": "AI 翻译",
+        "description": "右键菜单上显示的翻译按钮"
+    },
+    "option_page_title": {
+        "message": "选项 ｜ AI 小窗"
+    },
+    "tip_unset_apikey": {
+        "message": "API-KEY未设置"
+    },
+    "tip_save_success": {
+        "message": "保存成功，开始使用吧"
+    },
+    "tip_save_fail": {
+        "message": "保存失败，模型或KEY或服务未配置"
+    },
+    "n_tab_setting": {
+        "message": "设置"
+    },
+    "n_tab_help": {
+        "message": "帮助"
+    },
+    "n_tab_about": {
+        "message": "关于"
+    },
+    "n_sett_h1": {
+        "message": "基本设置"
+    },
+    "n_sett_svc": {
+        "message": "选择API服务"
+    },
+    "n_srv_wx":{
+        "message": "文心一言"
+    },
+    "n_srv_qw":{
+        "message": "通义千问"
+    },
+    "n_sett_key": {
+        "message": "API-KEY 密钥"
+    },
+    "n_sett_model": {
+        "message": "选择模型"
+    },
+    "n_sett_xc": {
+        "message": "小窗功能"
+    },
+    "n_op_icon": {
+        "message": "在网页上显示小图标:"
+    },
+    "n_op_summ": {
+        "message": "尝试总结网页内容:"
+    },
+    "n_op_open": {
+        "message": "打开新窗口时自动开启:"
+    },
+    "n_op_size": {
+        "message": "记住小窗的大小:"
+    },
+    "n_op_ctrl": {
+        "message": "发送消息时使用 <code>Ctrl + Enter<code>"
+    },
+    "save": {
+        "message": "保存设置"
+    },
+    "n_sett_savetip": {
+        "message": "提示：保存设置后需要刷新一次网页，设置才会生效"
+    },
+    "n_help_h1": {
+        "message": "使用说明"
+    },
+    "n_help_p1": {
+        "message": "由于插件的功能是基于 <mark>通义千问</mark>、<mark>文心一言</mark>和<mark>ChatGPT</mark>的AI模型接口，并且不提供后台服务。为了能让这个扩展正常使用，你需要在设置中配置所使用的服务和对应的访问密钥<mark>API-KEY</mark>（在使用文心一言时需要单独配置<code>API Key</code>和<code>Secret Key</code>）。"
+    },
+    "n_help_p2": {
+        "message": "配置文件信息只存储在本地，不会被上传。同时插件也不会上传会话数据到除AI模型接口以外的任何位置。"
+    },
+    "n_help_hg3": {
+        "message": "如何获取和使用你自己的<mark>API-KEY</mark>"
+    },
+    "n_help_pp1": {
+        "message": "<b>「通义千问」操作文档地址：</b><br><u>https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key/</u>"
+    },
+    "n_help_pp2": {
+        "message": "<b>「文心一言」操作文档地址：</b><br><u>https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Dlkm79mnx</u>"
+    },
+    "n_help_pp3": {
+        "message": "<b>「OpenAI」操作文档地址：</b><br><u>https://platform.openai.com/docs/quickstart</u>"
+    },
+    "n_help_pp4": {
+        "message": "<small>如果你想支持插件的开发，并且还没有阿里云的帐号，那么你可以选择使用下面这个邀请链接注册/登录阿里云帐号，获取通义千问的API-KEY。<br>这样你就在没有任何影响的情况下支持了这款插件，我也能因此获得阿里云给予的用户邀请奖励。<br><u>https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key/?source=5176.11533457&userCode=kgu85cxt</u></small>"
+    },
+    "n_help_hp4": {
+        "message": "快捷键"
+    },
+    "n_help_pp5": {
+        "message": "在任意打开的网页，可以双击键盘的 <kbd>G</kbd> ，快速开启小窗。<br>当开启小窗时，双击键盘的 <kbd>回车</kbd> ，可以开启上下文对话。"
+    },
+    "n_help_hp5": {
+        "message": "关于设置的说明"
+    },
+    "n_help_pp6": {
+        "message": "<b>在网页上显示小图标</b>： 当在页面中选中文本时，会在选中的文本框附近自动出现一个小图标。<br><b>尝试总结网页内容</b>： 开启开关后，在鼠标没有选中文本的情况下，开启小窗时，会尝试总结网页的内容(并不总是能准确获取)<br><b>打开新窗口时自动开启</b>：在打开新的网页时，小窗会自动开启。<br><b>记住小窗的大小</b>：每次开启小窗时，小窗会在上次出现的位置。<br><b>发送消息时使用 Ctrl + Enter</b>：在发送消息时可以支持使用回车输入多行文字。<br>"
+    },
+    "sw_base_role_content": {
+        "message": "You are a helpful assistant."
+    },
+    "sw_base_role_summary": {
+        "message": "请帮我总结一下下面的内容讲了什么，不要疑问，不要像机器人一样，只管总结内容，记得要用中文"
+    },
+    "sw_base_role_transfer": {
+        "message": "我希望你能担任中文翻译、拼写校对和修辞改进的角色。我会用任何语言和你交流，你会识别语言，将其翻译并用更为优美和精炼的中文回答我。请将我简单的词汇和句子替换成更为优美和高雅的表达方式，确保意思不变，但使其更具文学性。请仅回答更正和改进的部分，不要写解释。"
+    },
+    "sw_user_role_summary": {
+        "message": "请帮我总结一下内容"
+    },
+    "sw_user_hello": {
+        "message": "你好"
+    },
+    "sw_user_ok":{
+        "message": "好的"
+    },
+    "sw_base_set_history": {
+        "message": "这是一段网页上的内容，后面的聊天会在这个的基础之上："
+    },
+    "sw_error_msg_unset": {
+        "message": "## 还未设置后端服务及「API-KEY」，请先配置后再使用。 \n\n配置方式： 使用鼠标右键点击浏览器上方的扩展图标，并选择「选项」进入插件配置页面"
+    },
+    "sw_error_msg_auth": {
+        "message": "## 接口认证失败，请检查「API-KEY」配置 \n\n配置方式： 使用鼠标右键点击浏览器上方的扩展图标，并选择「选项」进入插件配置页面"
+    }
+    
+}

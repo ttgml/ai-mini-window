@@ -1,0 +1,148 @@
+{
+    "extName": {
+        "message": "AI Mini Window",
+        "description": "扩展名字"
+    },
+    "extDescription": {
+        "message": "AI Mini Window | AI Transfer | Summary | Fast | Non-Server | Support Qwen、Ernie and ChatGPT",
+        "description": "插件注释"
+    },
+    "extDefaultTitle": {
+        "message": "Open AI Mini Window",
+        "description": "小图标上显示的默认标题"
+    },
+    "menuTransferTitle": {
+        "message": "AI Transfer",
+        "description": "右键菜单上显示的翻译按钮"
+    },
+    "option_page_title": {
+        "message": "Options ｜ AI Mini Window"
+    },
+    "tip_unset_apikey": {
+        "message": "API-KEY Unset"
+    },
+    "tip_save_success": {
+        "message": "Saved"
+    },
+    "tip_save_fail": {
+        "message": "Save Fail, Plaese Check Again"
+    },
+    "n_tab_setting": {
+        "message": "SETTING"
+    },
+    "n_tab_help": {
+        "message": "HELP"
+    },
+    "n_tab_about": {
+        "message": "ABOUT"
+    },
+    "n_sett_h1": {
+        "message": "Base Option"
+    },
+    "n_sett_svc": {
+        "message": "Select API Service"
+    },
+    "n_srv_wx":{
+        "message": "Ernie"
+    },
+    "n_srv_qw":{
+        "message": "Qwen"
+    },
+    "n_sett_key": {
+        "message": "API-KEY"
+    },
+    "n_sett_model": {
+        "message": "Select AI Model"
+    },
+    "n_sett_xc": {
+        "message": "Mini Window Feature"
+    },
+    "n_op_icon": {
+        "message": "Display icons on web pages:"
+    },
+    "n_op_summ": {
+        "message": "Try to summarize the content of the page:"
+    },
+    "n_op_open": {
+        "message": "Automatically open when opening a new window:"
+    },
+    "n_op_size": {
+        "message": "Remember the size of the mini window:"
+    },
+    "n_op_ctrl": {
+        "message": "Use <code>Ctrl + Enter</code> when sending a message"
+    },
+    "save": {
+        "message": "Save"
+    },
+    "n_sett_savetip": {
+        "message": "Note: After saving the settings, you need to refresh the webpage once for the changes to take effect."
+    },
+    "n_help_h1": {
+        "message": "Instructions for use"
+    },
+    "n_help_p1": {
+        "message": "Due to the functionality of the plugin being based on the AI model interfaces of <mark>Qwen</mark>、<mark>Ernie</mark> and <mark>ChatGPT</mark> and not providing backend services, in order for this extension to function properly, you need to configure the services used and their corresponding access keys (API-KEY) in the settings. When using \"<mark>Ernie</mark>\" it is necessary to configure the <mark>API Key</mark> and <mark>Secret Key</mark> separately."
+    },
+    "n_help_p2": {
+        "message": "The configuration file information is only stored locally and will not be uploaded. Additionally, the plugin will not upload session data to any location other than the AI model interfaces."
+    },
+    "n_help_hg3": {
+        "message": "How to obtain and use your own <mark>API-KEY</mark>"
+    },
+    "n_help_pp1": {
+        "message": "<b>「Qwen」operation documentation address：</b><br><u>https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key/</u>"
+    },
+    "n_help_pp2": {
+        "message": "<b>「Ernie」operation documentation address：</b><br><u>https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Dlkm79mnx</u>"
+    },
+    "n_help_pp3": {
+        "message": "<b>「OpenAI」operation documentation address：</b><br><u>https://platform.openai.com/docs/quickstart</u>"
+    },
+    "n_help_pp4": {
+        "message": "<small>If you wish to support the development of the plugin and do not yet have an Alibaba Cloud account, you can choose to register/log in to Alibaba Cloud using the invitation link below to obtain the API-KEY for \"Qwen\"<br>By doing so, you can support the plugin without any impact, and I will also receive user referral rewards from Alibaba Cloud.<br><u>https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key/?source=5176.11533457&userCode=kgu85cxt</u></small>"
+    },
+    "n_help_hp4": {
+        "message": "shortcut keys"
+    },
+    "n_help_pp5": {
+        "message": "On any open webpage, you can quickly open a mini window by double-clicking the <kbd>G</kbd> key on the keyboard. When the mini window is open, you can initiate a contextual conversation by double-clicking the <kbd>Enter</kbd> key on the keyboard."
+    },
+    "n_help_hp5": {
+        "message": "Instructions on Settings"
+    },
+    "n_help_pp6": {
+        "message": "<b>Show Small Icon on Webpages</b>: When text is selected on a page, a small icon will automatically appear near the selected text box.<br><b>Attempt to Summarize Webpage Content</b>: When the toggle is on and no text is selected with the mouse, opening the small window will attempt to summarize the content of the webpage (may not always be accurate).<br><b>Automatically Open When Opening a New Window</b>: When opening a new webpage, the small window will open automatically.<br><b>Remember Window Size</b>: Each time the small window is opened, it will appear in the last position.<br><b>Use Ctrl + Enter to Send Messages</b>: Support using Enter to input multiple lines of text when sending messages.<br>"
+    },
+    "n_about_h1": {
+        "message": "About this extension"
+    },
+    "sw_base_role_content": {
+        "message": "You are a helpful assistant."
+    },
+    "sw_base_role_summary": {
+        "message": "Please help me summarize what the following content is about. Avoid questions and robot-like responses. Just focus on summarizing the content."
+    },
+    "sw_base_role_transfer": {
+        "message": "I wish for you to assume the roles of English translation, spelling verification, and rhetorical refinement. I am open to communicating with you in any language, trusting your ability to recognize and translate it into more elegant and refined Chinese. Kindly replace my straightforward vocabulary and sentences with more graceful and sophisticated expressions, ensuring the meaning remains unchanged but elevating the literary quality. Please only respond with corrections and improvements, without providing explanations."
+    },
+    "sw_user_role_summary": {
+        "message": "Please help me summarize the content."
+    },
+    "sw_user_hello": {
+        "message": "hello"
+    },
+    "sw_user_ok":{
+        "message": "ok"
+    },
+    "sw_base_set_history": {
+        "message": "This is a segment of content from a webpage, and the subsequent conversation will build upon this foundation.: "
+    },
+    "sw_error_msg_unset": {
+        "message": "## Backend services and「API-KEY」have not been set up yet. Please configure them before use.。 \n\nConfiguration Method: Right-click on the extension icon above the browser and select「Options」to access the plugin configuration page."
+    },
+    "sw_error_msg_auth": {
+        "message": "## Interface authentication failed. Please check the 「API-KEY」 configuration. \n\nConfiguration Method: Right-click on the extension icon above the browser and select「Options」to access the plugin configuration page."
+    }
+    
+}

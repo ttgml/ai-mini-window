@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="/statics/css/mdui.min.css" />
+    <link rel="stylesheet" href="/options/options.css" />
+    <script src="/statics/js/mdui.min.js"></script>
+
+    <title id="option_page_title">Options ｜ AI Mini Window</title>
+</head>
+
+<body>
+    <div class="mdui-container">
+        <div style="max-width: 800px;">
+            <div class="mdui-tab" id="tab">
+                <a id="n_tab_setting" href="#setting-tab" class="mdui-ripple">设置</a>
+                <!-- <a href="#history-tab" class="mdui-ripple">会话记录</a> -->
+                <a id="n_tab_help" href="#help-tab" class="mdui-ripple">使用说明</a>
+                <a id="n_tab_about" href="#about-tab" class="mdui-ripple">关于</a>
+            </div>
+            <div id="setting-tab" class="mdui-p-a-2">
+                <div>
+                    <h1 id="n_sett_h1">基本设置</h1>
+                    <br><br>
+                    <form id="baseSetting">
+                        <div>
+                            <b id="n_sett_svc">选择API服务</b><br><br>
+                            <label class="mdui-radio">
+                                <input id="option-service-ernie" class="option-service" type="radio" name="service"
+                                    value="ernie" />
+                                <i class="mdui-radio-icon"></i>
+                                文心一言 (Ernie)
+                            </label><br>
+                            <label class="mdui-radio">
+                                <input id="option-service-qwen" class="option-service" type="radio" name="service"
+                                    value="qwen" />
+                                <i class="mdui-radio-icon"></i>
+                                通义千问 (Qwen)
+                            </label><br>
+                            <label class="mdui-radio">
+                                <input id="option-service-openai" class="option-service" type="radio" name="service"
+                                    value="openai" />
+                                <i class="mdui-radio-icon"></i>
+                                OpenAI
+                            </label><br>
+                            
+                        </div>
+                        <br><br>
+                        <div id="set-api-key">
+                            <b id="n_sett_key">API-KEY 密钥</b>
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <!-- <label class="mdui-textfield-label">key</label> -->
+                                <input class="mdui-textfield-input" name="key" id="apikey" type="text" />
+                            </div>
+                        </div>
+                        <div id="set-client-secret">
+                            <b>API Key</b>
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <!-- <label class="mdui-textfield-label">key</label> -->
+                                <input class="mdui-textfield-input" name="key" id="client-apikey" type="text" />
+                            </div>
+                            <b>Secret Key</b>
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <!-- <label class="mdui-textfield-label">key</label> -->
+                                <input class="mdui-textfield-input" name="key" id="client-secret" type="text" />
+                            </div>
+                        </div>
+                        <br><br>
+                        <div>
+                            <b id="n_sett_model">选择模型</b><br><br>
+                            <div id="qwen-models">
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="qwen-turbo" />
+                                    <i class="mdui-radio-icon"></i>
+                                    qwen-turbo
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="qwen-plus" />
+                                    <i class="mdui-radio-icon"></i>
+                                    qwen-plus
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="qwen-max" />
+                                    <i class="mdui-radio-icon"></i>
+                                    qwen-max
+                                </label>
+                            </div>
+                            <div id="openai-models">
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="gpt-3.5-turbo" />
+                                    <i class="mdui-radio-icon"></i>
+                                    gpt-3.5-turbo
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="gpt-4-vision-preview" />
+                                    <i class="mdui-radio-icon"></i>
+                                    gpt-4-vision-preview
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="gpt-4" />
+                                    <i class="mdui-radio-icon"></i>
+                                    gpt-4
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="gpt-4-32k" />
+                                    <i class="mdui-radio-icon"></i>
+                                    gpt-4-32k
+                                </label>
+                            </div>
+                            <div id="ernie-models">
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="ernie4" />
+                                    <i class="mdui-radio-icon"></i>
+                                    ERNIE-Bot 4.0
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="ernie8k" />
+                                    <i class="mdui-radio-icon"></i>
+                                    ERNIE-Bot-8K
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="ernie3" />
+                                    <i class="mdui-radio-icon"></i>
+                                    ERNIE-Bot
+                                </label><br>
+                                <label class="mdui-radio">
+                                    <input class="service-model" type="radio" name="model" value="ernietb" />
+                                    <i class="mdui-radio-icon"></i>
+                                    ERNIE-Bot-turbo
+                                </label>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div>
+                            <b id="n_sett_xc">小窗功能</b><br><br>
+                            <div>
+                                <span id="n_op_icon" class="switch_option">在网页上显示小图标:</span>
+                                <label class="mdui-switch">
+                                    <input id="option-selected-tip" name="selected-tip" type="checkbox" />
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </div>
+                            <div>
+                                <span id="n_op_summ" class="switch_option">尝试总结网页内容:</span>
+                                <label class="mdui-switch">
+                                    <input id="option-summary-page" name="summary-page" type="checkbox" />
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </div>
+                            <div style="display: none;">
+                                <span class="switch_option">小窗内开启连续对话:</span>
+                                <label class="mdui-switch">
+                                    <input id="option-continue-chat" name="continue-chat" type="checkbox" />
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </div>
+                            <div>
+                                <span id="n_op_open" class="switch_option">打开新窗口时自动开启:</span>
+                                <label class="mdui-switch">
+                                    <input id="option-auto-open-pop" name="auto-open-pop" type="checkbox" />
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </div>
+                            <div>
+                                <span id="n_op_size" class="switch_option">记住小窗的大小:</span>
+                                <label class="mdui-switch">
+                                    <input id="option-rember-pop-size" name="rember-pop-size" type="checkbox" />
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </div>
+                            <div style="display: none;">
+                                <span class="switch_option">跨窗口同步小窗数据:</span>
+                                <label class="mdui-switch">
+                                    <input id="option-sync-all-pop" name="sync-all-pop" type="checkbox" />
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </div>
+                            <div>
+                                <span id="n_op_ctrl" class="switch_option">发送消息时使用 <code>Ctrl + Enter</code></span>
+                                <label class="mdui-switch">
+                                    <input id="option-use-ctrl-enter" name="use-ctrl-enter" type="checkbox" />
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </div>
+                        </div>
+
+                    </form>
+                    <br><br><br><br>
+                    <button id="save" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent">保存</button>
+                    <br>
+                    <p id="n_sett_savetip">提示：保存设置后需要刷新一次网页，设置才会生效</p>
+                    <br>
+                </div>
+
+            </div>
+            <!-- <div id="history-tab" class="mdui-p-a-2">
+                <h1>会话记录</h1>
+                <h2>balabala</h2>
+            </div> -->
+            <div id="help-tab" class="mdui-p-a-2">
+                <h1 id="n_help_h1">使用说明</h1>
+                <br><br>
+                <div class="mdui-typo">
+                    
+                    <p id="n_help_p1">由于插件的功能是基于 <mark>通义千问</mark>、<mark>文心一言</mark>和<mark>ChatGPT</mark>的AI模型接口，并且不提供后台服务。
+                        为了能让这个扩展正常使用，你需要在设置中配置所使用的服务和对应的访问密钥<mark>API-KEY</mark>（在使用文心一言时需要单独配置<code>API Key</code>和<code>Secret Key</code>）。
+
+                    <p id="n_help_p2">配置文件信息只存储在本地，不会被上传。同时插件也不会上传会话数据到除AI模型接口以外的任何位置。</p>
+                    
+                    <h3 id="n_help_hg3">如何获取和使用你自己的<mark>API-KEY</mark></h3>
+                    <p id="n_help_pp1"><b>「通义千问」操作文档地址：</b><br><u>https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key/</u></p>
+                    <p id="n_help_pp2"><b>「文心一言」操作文档地址：</b><br><u>https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Dlkm79mnx</u></p>
+                    <p id="n_help_pp3"><b>「OpenAI」操作文档地址：</b><br><u>https://platform.openai.com/docs/quickstart</u></p>
+                    
+
+                    <h4>🔔</h4>
+                    <p id="n_help_pp4">
+                        <small>如果你想支持插件的开发，并且还没有阿里云的帐号，那么你可以选择使用下面这个邀请链接注册/登录阿里云帐号，获取通义千问的API-KEY。<br>
+                            这样你就在没有任何影响的情况下支持了这款插件，我也能因此获得阿里云给予的用户邀请奖励。<br>
+                        <u>https://help.aliyun.com/zh/dashscope/developer-reference/activate-dashscope-and-create-an-api-key/?source=5176.11533457&userCode=kgu85cxt</u>
+                        </small>
+                    </p>
+                    <h3 id="n_help_hp4">快捷键</h3>
+                    <p id="n_help_pp5">
+                        在任意打开的网页，可以双击键盘的 <kbd>G</kbd> ，快速开启小窗。<br>
+                        当开启小窗时，双击键盘的 <kbd>回车</kbd> ，可以开启上下文对话。
+                    </p>
+                    <h3 id="n_help_hp5">关于设置的说明</h3>
+                    <p id="n_help_pp6">
+                        <b>在网页上显示小图标</b>： 当在页面中选中文本时，会在选中的文本框附近自动出现一个小图标。<br>
+                        <b>尝试总结网页内容</b>： 开启开关后，在鼠标没有选中文本的情况下，开启小窗时，会尝试总结网页的内容(并不总是能准确获取)<br>
+                        <b>打开新窗口时自动开启</b>：在打开新的网页时，小窗会自动开启。<br>
+                        <b>记住小窗的大小</b>：每次开启小窗时，小窗会在上次出现的位置。<br>
+                        <b>发送消息时使用 Ctrl + Enter</b>：在发送消息时可以支持使用回车输入多行文字。<br>
+                    </p>
+                </div>
+            </div>
+            <div id="about-tab" class="mdui-p-a-2">
+                <h1 id="n_about_h1">关于这个插件</h1>
+                <div class="mdui-typo">
+                    <p>插件名：「AI小窗」 ｜ 「AI Mini Window」</p>
+                    <p>灵感来源于：<u>https://github.com/Eroyi/pop-up-search</u><br>
+                    仓库地址：<u>https://github.com/ttgml/ai-mini-window</u></p>
+                    <h4>扩展设想</h4>
+                    <p>让AI读取网页的内容，然后把网页内容作为聊天的上下文。基于这个，可以实现网页的内容总结，和比较智能的翻译功能。</p>
+                    <h4>其他参考</h4>
+                    <ul>
+                        <li>必应搜索页面中的鼠标选中后弹出的小图标</li>
+                        <li>bilibli视频播放页面的AI总结功能</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <script src="options.js"></script>
+
+</body>
+
+</html>
