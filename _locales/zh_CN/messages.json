@@ -42,6 +42,9 @@
     "n_sett_svc": {
         "message": "选择API服务"
     },
+    "n_sett_openai_url": {
+        "message": "OpenAI 接口地址(支持第三方镜像)"
+    },
     "n_srv_wx":{
         "message": "文心一言"
     },

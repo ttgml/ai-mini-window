@@ -42,6 +42,9 @@
     "n_sett_svc": {
         "message": "Select API Service"
     },
+    "n_sett_openai_url": {
+        "message": "OpenAI API Host URL (Support third-party mirror host)"
+    },
     "n_srv_wx":{
         "message": "Ernie"
     },

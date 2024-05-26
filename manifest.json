@@ -3,7 +3,7 @@
     "name": "__MSG_extName__",
     "short_name": "yuanfang",
     "author": "ttgml@outlook.com",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "__MSG_extDescription__",
     "default_locale": "zh_CN",
     "icons": {

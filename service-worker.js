@@ -59,13 +59,6 @@ chrome.runtime.onInstalled.addListener(function (details) {
     }
 });
 
-//收集卸载反馈
-// chrome.runtime.onInstalled.addListener(details => {
-//     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
-//         chrome.runtime.setUninstallURL('https://sout.ltd/');
-//     }
-// });
-
 
 // 生成1到10000之间的随机整数
 function getRandomNumber() {
@@ -114,11 +107,10 @@ function parseStringToObject(inputString) {
 //openai sse对象解析
 function parseDatatoList(input) {
     // 以"data: {"为分隔符将输入文本分割成数据块数组
-    var lines = input.split('\n')
+    var lines = input.split('\n\n')
     result = []
     //   console.log(lines)
     lines.forEach(function (value, i) {
-        // console.log(value,i)
         try {
             if ((value.length > 4) && (value.trim()[0] != '{')) {
                 new_json = JSON.parse(value.slice(5))

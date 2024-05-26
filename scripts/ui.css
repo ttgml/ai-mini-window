@@ -138,7 +138,7 @@
 }
 
 .bi-summary-popup-tips {
-    padding-left: 20px;
+    padding-left: 5px;
     font-size: large;
 }
 
@@ -376,4 +376,8 @@ svg:not(:root) {
     padding: 0px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.bi-summary-popup-tips-text {
+    color: black;
 }

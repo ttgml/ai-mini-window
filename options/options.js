@@ -9,6 +9,7 @@ const baseSetting = document.getElementById("baseSetting");
 
 var save_button = $('#save');
 var option_apikey = $('#apikey');
+var option_openai_mirror_url = $('#openai-mirror-url');
 var option_client_apikey = $('#client-apikey');
 var option_client_secret = $('#client-secret')
 
@@ -33,6 +34,8 @@ var display_ernie_models = $('#ernie-models')
 var display_set_apikey = $('#set-api-key')
 var display_set_client_secret = $('#set-client-secret')
 
+var display_set_openai_mirror = $('#set-openai-mirror')
+
 
 // 为了国际化/支持中英文
 $('#option_page_title').text(chrome.i18n.getMessage('option_page_title'))
@@ -45,6 +48,7 @@ $('#n_srv_wx').text(chrome.i18n.getMessage('n_srv_wx'))
 $('#n_srv_qw').text(chrome.i18n.getMessage('n_srv_qw'))
 $('#n_sett_key').text(chrome.i18n.getMessage('n_sett_key'))
 $('#n_sett_model').text(chrome.i18n.getMessage('n_sett_model'))
+$('#n_sett_openai_url').text(chrome.i18n.getMessage('n_sett_openai_url'))
 $('#n_sett_xc').text(chrome.i18n.getMessage('n_sett_xc'))
 $('#n_op_icon').text(chrome.i18n.getMessage('n_op_icon'))
 $('#n_op_summ').text(chrome.i18n.getMessage('n_op_summ'))
@@ -76,6 +80,7 @@ $('#n_about_h1').html(chrome.i18n.getMessage('n_about_h1'))
 
 option_service_openai.on('click', function () {
     display_set_apikey.show()
+    display_set_openai_mirror.show()
     display_set_client_secret.hide()
     display_openai_models.show()
     display_qwen_models.hide()
@@ -91,6 +96,7 @@ option_service_openai.on('click', function () {
 
 option_service_qwen.on('click', function () {
     display_set_apikey.show()
+    display_set_openai_mirror.hide()
     display_openai_models.hide()
     display_set_client_secret.hide()
     display_qwen_models.show()
@@ -107,6 +113,7 @@ option_service_qwen.on('click', function () {
 option_service_ernie.on('click', function () {
     display_set_apikey.hide()
     display_openai_models.hide()
+    display_set_openai_mirror.hide()
     display_set_client_secret.show()
     display_qwen_models.hide()
     display_ernie_models.show()
@@ -122,6 +129,7 @@ option_service_ernie.on('click', function () {
 save_button.on('click', function () {
     var service_value = $('input[name=service]:checked').val()
     var apikey_value = option_apikey.val()
+    var openai_mirror_url_value = option_openai_mirror_url.val()
     var client_apikey_value = option_client_apikey.val()
     var client_secret_value = option_client_secret.val()
     var model_value = $('input[name=model]:checked').val()
@@ -169,6 +177,10 @@ save_button.on('click', function () {
     }
     if (service_value == 'openai') {
         options.service_url = "https://api.openai.com/v1/chat/completions"
+        if (openai_mirror_url_value.trim() != "") {
+            options.service_url = openai_mirror_url_value.trim()
+            options.openai_mirror_url = openai_mirror_url_value.trim()
+        }
     }
 
     if (model_value == 'ernie4') {
@@ -228,6 +240,7 @@ async function loadData() {
         display_ernie_models.hide()
         display_set_apikey.show()
         display_set_client_secret.hide()
+        display_set_openai_mirror.hide()
         option_apikey.val(options.apikey);
     }
     if (options.service == "openai") {
@@ -236,6 +249,7 @@ async function loadData() {
         display_ernie_models.hide()
         display_set_apikey.show()
         display_set_client_secret.hide()
+        display_set_openai_mirror.show()
         option_apikey.val(options.apikey);
     }
     if (options.service == 'ernie') {
@@ -244,8 +258,15 @@ async function loadData() {
         display_ernie_models.show()
         display_set_apikey.hide()
         display_set_client_secret.show()
+        display_set_openai_mirror.hide()
         option_client_apikey.val(options.client_apikey)
         option_client_secret.val(options.client_secret)
+    }
+
+    if (options.openai_mirror_url != undefined && options.openai_mirror_url.trim() != "") {
+        option_openai_mirror_url.val(options.openai_mirror_url)
+    } else {
+        option_openai_mirror_url.val('https://api.openai.com/v1/chat/completions')
     }
 
     $.each(option_service_model, function (index, value) {
@@ -283,6 +304,7 @@ async function loadData() {
                 }
             }
         } else {
+
             if (options.apikey.trim() == '') {
                 inst.show(1)
                 mdui.snackbar({

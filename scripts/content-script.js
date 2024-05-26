@@ -172,7 +172,7 @@ function createResizeableComponent() {
   biSummaryPopupHeaderLeft.className = 'bi-summary-popup-header-left';
 
   var svgElementLeft = svgIconElement;
-  biSummaryPopupHeaderLeft.appendChild(svgElementLeft);
+  // biSummaryPopupHeaderLeft.appendChild(svgElementLeft);
 
   var biSummaryPopupTips = document.createElement('div');
   biSummaryPopupTips.className = 'bi-summary-popup-tips pop-window';
@@ -264,7 +264,7 @@ function createResizeableComponent() {
   tipsMain.appendChild(vanPopoverReference);
   biSummaryPopupTips.appendChild(tipsMain);
 
-  biSummaryPopupHeaderLeft.appendChild(svgElementLeft);
+  // biSummaryPopupHeaderLeft.appendChild(svgElementLeft);
   biSummaryPopupHeaderLeft.appendChild(biSummaryPopupTips);
 
   biSummaryPopupHeader.appendChild(biSummaryPopupHeaderLeft);
